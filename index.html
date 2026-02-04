@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Valentine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="content-wrapper">
+        <h1 id="question">Divijaa, will you be my Valentine?</h1>
+        <div class="btn-container">
+            <button id="yes-btn">Yes</button>
+            <button id="no-btn">No</button>
+        </div>
+    </div>
+
+    <!-- Hidden Game Panel -->
+    <div id="game-panel" class="hidden">
+        <div class="game-content">
+            <h2>The "Hard to Get" Challenge</h2>
+            <p>Fill the glass EXACTLY to the line to say 'No'.</p>
+            <p id="target-label">Target: ???</p>
+
+            <div class="game-scene">
+                <img id="water-jug" src="assets/water_jug.png" alt="Jug">
+                <div class="glass-container">
+                    <div id="target-line"></div>
+                    <div id="water-fill"></div>
+                </div>
+            </div>
+
+            <button id="pour-btn" class="game-btn">Hold to Pour!</button>
+            <p id="game-message"></p>
+        </div>
+    </div>
+
+    <!-- Hidden Trap Modal (Appears after 3 fails) -->
+    <div id="trap-modal" class="hidden">
+        <div class="trap-content">
+            <h2>Wanna try something else?</h2>
+            <p>You seem to be struggling with the water...</p>
+            <div class="trap-buttons">
+                <button id="trap-yes-val">Be my Valentine</button>
+                <button id="trap-diff-game">New Game</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container for falling elements -->
+    <div id="falling-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
